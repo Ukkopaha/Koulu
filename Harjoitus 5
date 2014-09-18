@@ -1,0 +1,33 @@
+/*
+Harjoitus 5
+Paulus Linna
+IIA14SB
+Tehtäväkuvaus:
+Kirjoita ohjelma, joka pyytää käyttäjältä kaksi kokonaislukua.
+
+Ohjelma tulostaa tekstin BINGO, mikäli luvut ovat samoja.
+
+Muussa tapauksessa ohjelma tulostaa tekstin BONGO.
+
+Päivämäärä: 18.9.2014
+Versio: 1.0
+*/
+
+#include <iostream>
+using namespace std;
+
+int luku1;
+int luku2;
+
+void main()
+{
+	cout << "Anna kaksi lukua: ";
+	cin >> luku1;
+	cin >> luku2;
+
+	if (luku1 == luku2)
+		cout << "BINGO!";
+
+	if (luku1 !=luku2)
+		cout << "BONGO!";
+}
