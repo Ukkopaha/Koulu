@@ -1,0 +1,52 @@
+/*
+Harjoitus 3
+Paulus Linna
+IIA14SB
+Tehtäväkuvaus:
+#include <iostream>
+using namespace std;
+void main (void)
+{
+cout << "Hei maailma!";
+}
+
+Muokkaa ylla olevaa ohjelmaa niin, etta tulostat oman nimesi
+ja osoitteesi naytolle allekkain.
+HUOM! Nimeä tiedosto harj3a.cpp nimelle!
+
+Muokkaa edellisestä ohjelmasta versio nimelle harj3b.cpp, jossa
+nimi ja osoite tulostetaan näytälle seuraavasti:
+
+**********************************
+* *
+* Etunimi *
+* Sukunimi *
+* *
+*-------------------------------------- *
+* *
+* Asemakatu 7 *
+* 40520 JKL *
+* *
+**********************************
+
+Päivämäärä: 11.9.2014
+Versio: 1.1
+*/
+
+#include <iostream>
+using namespace std;
+void main(void)
+{
+	cout << "**********************************"<<endl
+		<< "* *"<<endl
+		<< "* Paulus *"<<endl
+		<< "* Linna *"<<endl
+		<< "* *"<<endl
+		<< "*-------------------------------------- *"<<endl
+		<< "* *"<<endl
+		<< "* Varvikkotie 6 E 42 *"<<endl
+		<< "* 40530 JKL *"<<endl
+		<< "* *"<<endl
+		<< "**********************************"<<endl
+		;
+}
