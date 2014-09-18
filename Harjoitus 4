@@ -1,0 +1,67 @@
+/*
+Harjoitus 4
+Paulus Linna
+IIA14SB
+Tehtäväkuvaus:
+Ks. ohjelmakoodia: harj4 (omat esimerkit)
+
+a) Kirjoita, tallenna ja suorita ym. ohjelma.
+b) Kommentoi ylla olevan esimerkin kaikki rivit (mitä rivillä tapahtuu).
+c) Muuta vakioden nimet niin, että
+MAX => MINIMI
+max => MAKSIMI
+
+Muuta ohjelmaa niin, että voit tulostaa ohjelmalla seuraavat ilmoitukset:
+Summa on pienempi kuin MINIMI
+Summa on suurempi kuin MAKSIMI
+Summa on MINIMIN ja MAKSIMIN välissä
+
+Päivämäärä: 11.9.2013
+Versio: 1.0
+*/
+
+
+
+#include <iostream> // Sisällytetään iostream-kirjasto ohjelmaan, tällä saadaan näppäimistö ja näyttö ohjelmaan mukaan
+using namespace std; // Käytetään standardi nimiavaruutta
+
+// Vakioiden määrittely
+#define MINIMI 10 // Määrittää "MINIMI" vakiolle luvun 10, vanha tapa
+const int MAKSIMI = 20; // Määrittää "MINIMI" vakiolle luvun 20, uusi tapa
+// int=integer, kokonaisluku
+// Vakiot eivät muutu ohjelman aikana, vaan pysyvät aina samoina
+
+// Julkisten muuttujien määrittely/esittely
+int summa; // Esitellään muuttuja "summa"
+
+// Aliohjelmien esittely
+void Laske(int, int); // Esitellään aliohjelma "Laske"
+
+// Pääohjelma alkaa
+void main() // Esitellään päähojelma
+{
+    // Paikallisten muuttujien esittely/määrittely
+	int luku1 = 2; // Määritellään muuttuja "luku1" ja sille arvo 2
+	int luku2; // Määritellään muuttuja "luku2"
+	cout << "Syötä luku: "; // Tulostetaan teksti näytölle
+	cin >> luku2; // cin=character in, käyttäjä määrittelee muuttujalle "luku2" arvon
+	Laske(luku1, luku2); // Aliohjelmakutsu
+	if (summa < MINIMI &&
+        summa < MAKSIMI)
+		cout << "Summa on pienempi kuin " << MINIMI; // ...tulostetaan näytölle kyseinen teksti
+	if (summa < MAKSIMI &&
+		summa > MINIMI) // Verrataan muuttujaa "summa" vakioon "MINIMI", jos "summa on pienempi kuin "MAKSIMI", niin...
+		cout << "Summa on " << MAKSIMI
+    	     << " ja " << MINIMI
+             << " välissä"; // ..tulostetaan näytölle kyseinen teksti
+	if (summa > MINIMI &&
+		summa > MAKSIMI)
+		cout << "Summa on suurempi kuin " << MAKSIMI;
+}
+// Pääohjelma loppuu
+
+// Aliohjelman määrittely
+void Laske(int eka, int toka) // Esitellään aliohjelma ja nimetään muuttujat "luku1"->"eka" ja "luku2"->"toka"
+{
+	summa = eka + toka; // Määritellään muuttujalle "summa" arvo, joka on muuttujien "eka" ja "toka" summa
+}
